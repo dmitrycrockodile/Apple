@@ -1,0 +1,239 @@
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    clip-path: polygon(100% 0, 100% 95%, 38% 100%, 0 100%, 0 0);
+    position: relative;
+
+    &__banner {
+        flex-direction: column;
+
+        @include respond(phone) {
+            position: absolute;
+        }
+
+        h1 {
+            font-size: 14rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+
+            @include respond(tab-mini-land) {
+                font-size: 8rem;
+            }
+
+            @include respond(phone) {
+                position: relative;
+                left: -5rem;
+            }
+
+            &::first-letter {
+
+                @include respond(phone) {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+
+        p {
+            font-size: 4rem;
+            letter-spacing: .1rem;
+            margin: 6rem 0 4rem 0;
+
+            @include respond(tab-mini-land) {
+                font-size: 3rem;
+            }
+
+            @include respond(phone-small) {
+                text-align: center;
+            }
+        }
+
+        span {
+            font-size: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        button {
+            padding: 2rem 4rem;
+            font-size: 2rem;
+            background-color: $color-black;
+            color: $color-primary;
+            letter-spacing: .1rem;
+            border: none;
+            border-radius: .5rem;
+            cursor: pointer;
+            clip-path: polygon(
+                50% 0%,
+                81% 5%,
+                100% 0,
+                100% 100%,
+                80% 95%,
+                50% 100%,
+                20% 95%,
+                0 100%,
+                0 0,
+                23% 5%
+            );
+            transition: clip-path .5s;
+
+            &:hover {
+                clip-path: polygon(
+                    40% 15%,
+                    77% 15%,
+                    100% 10%,
+                    100% 90%,
+                    75% 85%,
+                    40% 85%,
+                    30% 100%,
+                    0 50%,
+                    0 50%,
+                    30% 0
+                );
+
+                @include respond(phone) {
+                    clip-path: polygon(
+                        50% 0%,
+                        81% 5%,
+                        100% 0,
+                        100% 100%,
+                        80% 95%,
+                        50% 100%,
+                        20% 95%,
+                        0 100%,
+                        0 0,
+                        23% 5%
+                    );
+                }
+            }
+        }
+    }
+}
+
+.section-2 {
+    width: 100%;
+    height: 120vh;
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &__heading {
+        font-size: 10rem;
+        font-weight: 200;
+        color: $color-black;
+        position: relative;
+        margin-bottom: 5rem;
+
+        @include respond(phone-small) {
+            font-size: 8rem;
+        }
+
+        &::before {
+            content: '';
+            width: 130%;
+            height: 30vw;
+            background: linear-gradient($color-primary, $color-white);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: skewX(-50deg);
+            transform-origin: left top;
+            z-index: -1;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.section-3 {
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+    flex-direction: column;
+    padding: 15rem 0;
+    clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
+
+    &__heading {
+        font-size: 10rem;
+        font-weight: 200;
+        color: $color-primary;
+        margin-bottom: 15rem;
+
+        @include respond(phone-small) {
+            font-size: 6rem;
+        }
+    }
+
+    &__content {
+        width: 80%;
+        flex-direction: column;
+        perspective: 1000rem;
+        position: relative;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
+
+        img {
+            width: inherit;
+        }
+    }
+}
+
+.section-4 {
+    height: 140vh;
+    padding: 20vh 0;
+    flex-direction: column;
+    position: relative;
+}
+
+.section-5 {
+    width: 100%;
+    height: 100vh;
+
+    &__heading {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 15rem;
+        font-weight: 300;
+        color: $color-white;
+        text-shadow: .1rem .1rem 0 #999;
+
+        @include respond(tab-port) {
+            font-size: 12rem;
+        }
+    }
+}
+
+.section-6 {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+
+    &__icon-link {
+        margin: 0 5rem;
+
+        @include respond(phone) {
+            margin: 0 2rem;
+        }
+
+        img {
+            width: 10rem;
+
+            @include respond(phone-small) {
+                width: 8rem;
+            }
+
+            @include respond(phone-small) {
+                width: 6rem;
+            }
+        }
+    }
+}

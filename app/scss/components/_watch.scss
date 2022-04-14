@@ -1,0 +1,88 @@
+.watch {
+
+    &__bands {
+        transition: margin-right 1s;
+
+        &-img {
+            width: 35rem;
+            height: 35rem;
+            object-fit: contain;
+        }
+    }
+
+    &__cases {
+        flex-direction: column;
+        transition: margin-top 1s;
+
+        &-img {
+            width: 35rem;
+            height: 35rem;
+            object-fit: contain;
+        }
+    }
+
+    &__control {
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 5rem;
+        background-color: rgba(221, 221, 221, .4);
+        transition: opacity .5s;
+
+        &--top {
+            top: 22vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--right {
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+        }
+
+        &--bottom {
+            left: 50%;
+            bottom: 22vh;
+            transform: translateX(-50%);
+        }
+
+        &--left {
+            top: 50%;
+            left: 2rem;
+            transform: translateY(-50%);
+        }
+
+        i {
+            font-size: 3rem;
+            color: $color-primary;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 30vh;
+        right: 35%;
+        width: 13rem;
+        height: 5rem;
+        background-color: $color-black;
+        color: $color-primary;
+        border: 1px dashed $color-white;
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        font-weight: 200;
+        cursor: pointer;
+
+        @include respond(tab-mini-land) {
+            right: 25%;
+        }
+
+        @include respond(phone) {
+            right: 15%;
+        }
+
+        @include respond(phone-small) {
+            right: 5%;
+        }
+    }
+}

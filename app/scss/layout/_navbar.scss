@@ -1,0 +1,31 @@
+.navbar {
+    position: absolute;
+    top: 3rem;
+    right: 10%;
+
+    @include respond(phone-small) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    &__link {
+        font-size: 2rem;
+        display: inline-block;
+        margin: 0 3rem;
+        color: $color-black;
+        transition: transform .5s;
+
+        @include respond(tab-mini-land) {
+            font-weight: 700;
+        }
+
+        @include respond(phone-small) {
+            margin: 0 1.5rem;
+        }
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}

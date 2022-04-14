@@ -1,0 +1,25 @@
+.logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+
+    @include respond(phone) {
+        top: 0;
+        left: 2rem;
+    }
+
+    @include respond(phone-small) {
+        top: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    i {
+        font-size: 10rem;
+        color: rgba($color-black, .8);
+
+        @include respond(phone) {
+            font-size: 8rem;
+        }
+    }
+}
